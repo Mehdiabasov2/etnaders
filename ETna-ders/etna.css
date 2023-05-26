@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    background-color: rgb(0, 51, 255);
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo {
+    width: 140px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-links a {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav-links a i {
+    margin-left: 10px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(28, 103, 255);
+}
+
+.responsive-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    height: 100vh;
+    width: 80%;
+    background-color: black;
+    opacity: 1;
+    z-index: 9999;
+    display: none;
+}
+
+.res-nav-links {
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.xmark-icon {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 12px;
+    margin: 10px;
+    background-color: rgb(72, 72, 72);
+    text-align: end;
+}
+
+.res-nav-links a {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.transform {
+    transform: translateX(0) !important;
+}
+
+body {
+    height: 300vh;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 10px;
+    }
+
+    .responsive-nav {
+        transition: 0.7s;
+        display: flex;
+        transform: translateX(-800px);
+    }
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
